@@ -1,0 +1,155 @@
+/* Base Typography and Element Styles - Swiss Style Foundation */
+
+body {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-18);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-loose);
+  color: var(--color-black);
+  background-color: var(--color-white);
+}
+
+/* Typography Hierarchy */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-snug);
+  letter-spacing: -0.03em;
+}
+
+h1 {
+  font-size: var(--font-size-76);
+  font-weight: var(--font-weight-black);
+  line-height: var(--line-height-tight);
+}
+
+h2 {
+  font-size: var(--font-size-57);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-snug);
+}
+
+h3 {
+  font-size: var(--font-size-32);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-normal);
+}
+
+p {
+  max-width: 65ch;
+  line-height: var(--line-height-loose);
+}
+
+/* Swiss Style Text Alignment */
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Lead Text */
+.lead {
+  font-size: var(--font-size-18);
+  line-height: var(--line-height-loose);
+  font-weight: var(--font-weight-regular);
+}
+
+.lead-large {
+  font-size: calc(var(--font-size-18) * 1.2);
+  line-height: var(--line-height-loose);
+}
+
+/* Caption Text */
+.caption {
+  font-size: var(--font-size-14);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-gray-mid);
+}
+
+/* Links */
+a {
+  color: inherit;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-blue);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--color-blue);
+  outline-offset: 4px;
+}
+
+/* Buttons - Swiss Functional Aesthetic */
+.btn {
+  display: inline-block;
+  padding: var(--space-16) var(--space-48);
+  font-size: var(--font-size-18);
+  font-weight: var(--font-weight-semibold);
+  text-align: center;
+  transition: all var(--transition-base);
+  border-radius: var(--radius-none);
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--color-blue);
+  color: var(--color-white);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+.btn-secondary {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  border: 2px solid var(--color-black);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-white);
+  color: var(--color-black);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-black);
+  border: 2px solid var(--color-black);
+}
+
+.btn-outline:hover {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+/* Dark background button variants */
+.btn-outline-light {
+  color: var(--color-white);
+  border: 2px solid var(--color-white);
+}
+
+.btn-outline-light:hover {
+  background-color: var(--color-white);
+  color: var(--color-black);
+}
+
+/* Focus states */
+.btn:focus-visible {
+  outline: 2px solid var(--color-blue);
+  outline-offset: 4px;
+}
+
+/* Selection */
+::selection {
+  background-color: var(--color-blue);
+  color: var(--color-white);
+}

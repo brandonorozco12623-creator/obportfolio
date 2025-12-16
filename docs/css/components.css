@@ -1,0 +1,241 @@
+/* Reusable Component Styles - Notan-Swiss Components */
+
+/* Navigation - Swiss Precision */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-nav);
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-black);
+  transition: transform var(--transition-base);
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--space-24);
+  padding-bottom: var(--space-24);
+}
+
+.nav-logo {
+  font-size: var(--font-size-18);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.02em;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: var(--space-48);
+}
+
+.nav-link {
+  font-size: var(--font-size-18);
+  font-weight: var(--font-weight-regular);
+  position: relative;
+  transition: color var(--transition-fast);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-blue);
+  transition: width var(--transition-base);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Mobile Menu Toggle */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  width: 32px;
+  height: 32px;
+  padding: 4px;
+}
+
+.nav-toggle-line {
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-black);
+  transition: all var(--transition-base);
+}
+
+.nav-toggle.active .nav-toggle-line:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.nav-toggle.active .nav-toggle-line:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle.active .nav-toggle-line:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Hero Section - Notan Bold Typography */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 80px; /* Account for fixed nav */
+}
+
+.hero-headline {
+  margin-bottom: var(--space-32);
+  letter-spacing: -0.04em;
+}
+
+.hero-subheading {
+  font-size: var(--font-size-18);
+  line-height: var(--line-height-loose);
+  max-width: 60ch;
+  margin-bottom: var(--space-48);
+  color: var(--color-gray-mid);
+}
+
+.hero-cta {
+  display: flex;
+  gap: var(--space-24);
+  flex-wrap: wrap;
+}
+
+/* About Section - Swiss Layout */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: var(--space-64);
+  align-items: start;
+}
+
+.about-image {
+  width: 100%;
+  aspect-ratio: 1;
+  background-color: var(--color-gray-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-gray-mid);
+  font-size: var(--font-size-14);
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-content h2 {
+  margin-bottom: var(--space-32);
+}
+
+.about-content p {
+  margin-bottom: var(--space-24);
+}
+
+.about-content p:last-of-type {
+  margin-bottom: var(--space-48);
+}
+
+/* Expertise List - Swiss Precision */
+.expertise-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-16);
+  margin-top: var(--space-32);
+}
+
+.expertise-item {
+  padding: var(--space-16);
+  border-left: 3px solid var(--color-blue);
+  background-color: var(--color-gray-light);
+}
+
+.expertise-item h3 {
+  font-size: var(--font-size-18);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--space-8);
+}
+
+/* Notan Card - High Contrast Component */
+.card-notan {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  padding: var(--space-48);
+  transition: transform var(--transition-base);
+}
+
+.card-notan:hover {
+  transform: translateY(-4px);
+}
+
+.card-notan h3 {
+  margin-bottom: var(--space-16);
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: flex;
+  }
+  
+  .nav-menu {
+    position: fixed;
+    top: 73px;
+    left: 0;
+    right: 0;
+    background-color: var(--color-white);
+    border-bottom: 1px solid var(--color-black);
+    flex-direction: column;
+    gap: 0;
+    padding: var(--space-24);
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: all var(--transition-base);
+    pointer-events: none;
+  }
+  
+  .nav-menu.active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: all;
+  }
+  
+  .nav-link {
+    width: 100%;
+    padding: var(--space-16) 0;
+    border-bottom: 1px solid var(--color-gray-light);
+  }
+  
+  .nav-link:last-child {
+    border-bottom: none;
+  }
+  
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-48);
+  }
+  
+  .expertise-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero-cta {
+    flex-direction: column;
+  }
+  
+  .btn {
+    width: 100%;
+  }
+}

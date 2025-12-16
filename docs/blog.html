@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Brandon Orozco's Blog - Insights on AI implementation, web development, and technology.">
+    <meta name="keywords" content="AI blog, web development, technology insights, Brandon Orozco">
+    <meta name="author" content="Brandon Orozco">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Blog - Brandon Orozco">
+    <meta property="og:description" content="Insights on AI implementation, web development, and technology.">
+    <meta property="og:type" content="website">
+    
+    <title>Blog - Brandon Orozco</title>
+    
+    <!-- Stylesheet - Consolidated for reliability -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- p5.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
+    
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+<body>
+    <!-- Animated Background Canvas -->
+    <div id="canvas-container"></div>
+    
+    <!-- Skip to Content Link - Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to Content</a>
+    
+    <!-- Navigation -->
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+        <div class="container">
+            <div class="nav-container">
+                <a href="index.html" class="nav-logo">
+                    <span class="logo-square"></span>
+                    BRANDON OROZCO
+                </a>
+                
+                <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span class="nav-toggle-line"></span>
+                    <span class="nav-toggle-line"></span>
+                    <span class="nav-toggle-line"></span>
+                </button>
+                
+                <ul class="nav-menu" role="list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About Me</a></li>
+                    <li><a href="blog.html" class="nav-link active">Blog</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <main id="main-content">
+        
+        <!-- Blog Section -->
+        <section class="blog-page">
+            <div class="container">
+                <h1 class="page-title">Blog</h1>
+                
+                <!-- Blog Post - Images Left, Content Right -->
+                <article class="blog-post">
+                    <div class="blog-post-images-stack">
+                        <div class="blog-post-image">
+                            <img src="images/blog-images/blog-image1.jpg" alt="Blog post 1">
+                        </div>
+                        <div class="blog-post-image">
+                            <img src="images/blog-images/blog-image2.jpg" alt="Blog post 2">
+                        </div>
+                        <div class="blog-post-image">
+                            <img src="images/blog-images/blog-image3.jpg" alt="Blog post 3">
+                        </div>
+                    </div>
+                    <div class="blog-post-content">
+                        <h2>Entry 1</h2>
+                        <p class="blog-meta">December 15, 2025</p>
+                        <p class="blog-description">
+                            For this project, I worked on a website for a client of mine, an upcoming musician. After giving me a document describing what he wanted out of his website, I was able to create a repository on Github and connect it to VSCode to begin my work. With the knowledge on how to use AI for this project, I began by creating reports and references; essentially, I'd have Copilot create a report on information I give it, then I'd have it create a reference file or folder to use going forward. This way, hallucinations and forgetfulness from the AI is avoided. The rest is the work of precise and descriptive prompting, usage of deterministic outcomes as goals, and research on outside sources to enhance Copilot's knowledge and the website's look overall.
+                        </p>
+                        <p class="blog-description">
+                            <a href="https://brandonorozco12623-creator.github.io/comettonline/#links" target="_blank" rel="noopener noreferrer" style="color: #A8B899; text-decoration: underline;">Access Website Here</a>
+                        </p>
+                    </div>
+                </article>
+                
+                <!-- Blog Post 2 - Images Left, Content Right -->
+                <article class="blog-post">
+                    <div class="blog-post-images-stack">
+                        <div class="blog-post-image">
+                            <img src="images/blog-images/blog-image4.jpg" alt="Blog post 4">
+                        </div>
+                        <div class="blog-post-image">
+                            <img src="images/blog-images/blog-image5.jpg" alt="Blog post 5">
+                        </div>
+                        <div class="blog-post-image">
+                            <img src="images/blog-images/blog-image6.jpg" alt="Blog post 6">
+                        </div>
+                    </div>
+                    <div class="blog-post-content">
+                        <h2>Entry 2</h2>
+                        <p class="blog-meta">December 16, 2025</p>
+                        <p class="blog-description">
+                            This is a website I created to see how I could explore AI's understanding of UX Design; in this case, I wanted to see how it could handle the Luxury Typography style. Creating this website was quite easy, seeing as I started off with a large and detailed prompt to set up the site for a swift and efficient execution on the AI's behalf. That prompt consisted of getting Copilot to create a workflow folder containing backlog and sprint folders, along with getting the AI to conduct extensive research on luxury typography and create reports for it to use as references. With that, Copilot was ready to create a first draft of the website at my request, and the process continued. I made sure to include my calendly link and email for contact information, gave Copilot orders to conduct technical debt audits on the website and ensure mobile compatibility, and soon enough the website you see here was finished.
+                        </p>
+                        <p class="blog-description">
+                            <a href="https://brandonorozco12623-creator.github.io/luxurytypo_design/index.html" target="_blank" rel="noopener noreferrer" style="color: #A8B899; text-decoration: underline;">Access Website Here</a>
+                        </p>
+                    </div>
+                </article>
+                
+            </div>
+        </section>
+        
+    </main>
+    
+    <!-- Footer -->
+    <footer class="section section-white" style="padding-top: var(--space-48); padding-bottom: var(--space-48);">
+        <div class="container">
+            <div class="flex flex-between">
+                <p class="caption">© 2025 Brandon Orozco. All rights reserved.</p>
+                <div class="flex gap-24">
+                    <a href="index.html" class="caption">Home</a>
+                    <a href="about.html" class="caption">About Me</a>
+                    <a href="blog.html" class="caption">Blog</a>
+                    <a href="contact.html" class="caption">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-banner" class="cookie-banner">
+        <div class="cookie-content">
+            <p class="cookie-text">
+                This website uses cookies to enhance your browsing experience and analyze site traffic. By clicking "Accept", you consent to our use of cookies.
+            </p>
+            <div class="cookie-buttons">
+                <button id="cookie-accept" class="btn btn-primary">Accept</button>
+                <button id="cookie-decline" class="btn btn-outline">Decline</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- JavaScript -->
+    <script src="js/background.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/cookies.js"></script>
+</body>
+</html>
