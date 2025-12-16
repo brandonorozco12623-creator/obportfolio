@@ -67,3 +67,28 @@ window.addEventListener('load', () => {
   const loadTime = performance.now();
   console.log(`Page loaded in ${Math.round(loadTime)}ms`);
 });
+
+// Testimonial expand/collapse functionality
+document.addEventListener('DOMContentLoaded', () => {
+  const testimonialButtons = document.querySelectorAll('.testimonial-toggle-btn');
+  
+  testimonialButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const testimonialContent = button.closest('.testimonial-content');
+      const fullText = testimonialContent.querySelector('.testimonial-full');
+      const isExpanded = button.getAttribute('data-expanded') === 'true';
+      
+      if (isExpanded) {
+        // Collapse
+        fullText.style.display = 'none';
+        button.textContent = 'Read More';
+        button.setAttribute('data-expanded', 'false');
+      } else {
+        // Expand
+        fullText.style.display = 'block';
+        button.textContent = 'See Less';
+        button.setAttribute('data-expanded', 'true');
+      }
+    });
+  });
+});
