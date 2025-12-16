@@ -878,8 +878,8 @@ p {
 }
 
 .about-profile-image {
-  flex: 0 0 350px;
-  width: 350px;
+  flex: 0 0 250px;
+  width: 250px;
 }
 
 .about-profile-image img {
