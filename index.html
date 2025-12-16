@@ -20,6 +20,9 @@
     <!-- p5.js Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
     
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
     <!-- Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
 </head>
@@ -46,6 +49,7 @@
                 
                 <ul class="nav-menu" role="list">
                     <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
                     <li><a href="contact.html" class="nav-link">Contact</a></li>
                 </ul>
             </div>
@@ -71,7 +75,7 @@
                         </p>
                         <div class="hero-cta">
                             <a href="contact.html" class="btn btn-primary">Schedule Consultation</a>
-                            <a href="contact.html" class="btn btn-outline">Learn More</a>
+                            <a href="https://github.com/brandonorozco12623-creator" target="_blank" rel="noopener noreferrer" class="btn btn-outline"><i class="fa fa-github" style="margin-right: 8px;"></i>See My Github</a>
                         </div>
                     </div>
                 </div>
@@ -87,15 +91,30 @@
                 <p class="caption">© 2025 Brandon Orozco. All rights reserved.</p>
                 <div class="flex gap-24">
                     <a href="index.html" class="caption">Home</a>
+                    <a href="blog.html" class="caption">Blog</a>
                     <a href="contact.html" class="caption">Contact</a>
                 </div>
             </div>
         </div>
     </footer>
     
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-banner" class="cookie-banner">
+        <div class="cookie-content">
+            <p class="cookie-text">
+                This website uses cookies to enhance your browsing experience and analyze site traffic. By clicking "Accept", you consent to our use of cookies.
+            </p>
+            <div class="cookie-buttons">
+                <button id="cookie-accept" class="btn btn-primary">Accept</button>
+                <button id="cookie-decline" class="btn btn-outline">Decline</button>
+            </div>
+        </div>
+    </div>
+    
     <!-- JavaScript -->
     <script src="js/background.js"></script>
     <script src="js/navigation.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/cookies.js"></script>
 </body>
 </html>
