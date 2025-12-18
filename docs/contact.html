@@ -20,12 +20,14 @@
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     
+    <!-- Stylesheet - Consolidated for reliability -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- p5.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
+    
     <!-- Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    
-    <!-- Stylesheet - Consolidated for Performance -->
-    <link rel="stylesheet" href="css/consolidated.css">
 </head>
 <body>
     <!-- Animated Background Canvas -->
@@ -185,14 +187,11 @@
         </div>
     </div>
     
-    <!-- p5.js Library - Deferred for Performance -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js" defer></script>
-    
-    <!-- JavaScript - Deferred for Performance -->
-    <script src="js/background.js" defer></script>
-    <script src="js/navigation.js" defer></script>
-    <script src="js/page-transitions.js" defer></script>
-    <script src="js/cookies.js" defer></script>
-    <script src="js/zapier-form.js" defer></script>
+    <!-- JavaScript -->
+    <script src="js/background.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/page-transitions.js"></script>
+    <script src="js/cookies.js"></script>
+    <script src="js/zapier-form.js"></script>
 </body>
 </html>

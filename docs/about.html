@@ -20,16 +20,17 @@
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     
+    <!-- Stylesheet - Consolidated for reliability -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- p5.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
     <!-- Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    
-    <!-- Stylesheet - Consolidated for Performance -->
-    <link rel="stylesheet" href="css/consolidated.css">
-    
-    <!-- Font Awesome - Async Load -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></noscript>
 </head>
 <body>
     <!-- Animated Background Canvas -->
@@ -73,7 +74,7 @@
                 
                 <!-- Resume Image -->
                 <div class="resume-container">
-                    <img src="images/resume-image/resume-image.jpg" alt="Brandon Orozco Resume" class="resume-image" loading="lazy" width="800" height="1000">
+                    <img src="images/resume-image/resume-image.jpg" alt="Brandon Orozco Resume" class="resume-image">
                 </div>
                 
                 <!-- Description Text with Profile Image -->
@@ -87,7 +88,7 @@
                         </p>
                     </div>
                     <div class="about-profile-image">
-                        <img src="images/profile2/profile-2.jpg" alt="Brandon Orozco Profile" loading="lazy" width="600" height="600">
+                        <img src="images/profile2/profile-2.jpg" alt="Brandon Orozco Profile">
                     </div>
                 </div>
             </div>
@@ -124,13 +125,10 @@
         </div>
     </div>
     
-    <!-- p5.js Library - Deferred for Performance -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js" defer></script>
-    
-    <!-- JavaScript - Deferred for Performance -->
-    <script src="js/background.js" defer></script>
-    <script src="js/navigation.js" defer></script>
-    <script src="js/main.js" defer></script>
-    <script src="js/cookies.js" defer></script>
+    <!-- JavaScript -->
+    <script src="js/background.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/cookies.js"></script>
 </body>
 </html>
