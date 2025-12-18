@@ -1,0 +1,82 @@
+/* Design Tokens - Notan-Swiss Design System */
+
+:root {
+  /* Colors - Notan Palette */
+  --color-black: #000000;
+  --color-white: #FFFFFF;
+  --color-blue: #0066FF;
+  
+  /* Supporting Grays - Swiss Functional */
+  --color-gray-dark: #1A1A1A;
+  --color-gray-mid: #666666;
+  --color-gray-light: #F5F5F5;
+  
+  /* Typography - Swiss Style */
+  --font-primary: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Inter", "Segoe UI", Arial, sans-serif;
+  
+  /* Type Scale - Perfect Fourth (1.333) */
+  --font-size-14: 0.875rem;    /* 14px */
+  --font-size-18: 1.125rem;    /* 18px */
+  --font-size-32: 2rem;        /* 32px */
+  --font-size-57: 3.563rem;    /* 57px */
+  --font-size-76: 4.75rem;     /* 76px */
+  --font-size-101: 6.313rem;   /* 101px */
+  
+  /* Font Weights */
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+  
+  /* Line Heights */
+  --line-height-tight: 1.0;
+  --line-height-snug: 1.1;
+  --line-height-normal: 1.2;
+  --line-height-relaxed: 1.4;
+  --line-height-loose: 1.6;
+  
+  /* Spacing - 8px Base Unit */
+  --space-8: 0.5rem;     /* 8px */
+  --space-16: 1rem;      /* 16px */
+  --space-24: 1.5rem;    /* 24px */
+  --space-32: 2rem;      /* 32px */
+  --space-48: 3rem;      /* 48px */
+  --space-64: 4rem;      /* 64px */
+  --space-96: 6rem;      /* 96px */
+  --space-128: 8rem;     /* 128px */
+  
+  /* Grid System - 12 Column */
+  --grid-columns: 12;
+  --grid-gap: var(--space-24);
+  --container-max: 1200px;
+  --container-padding: var(--space-24);
+  
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 400ms ease;
+  
+  /* Border Radius (minimal - Swiss sharp edges) */
+  --radius-none: 0;
+  --radius-small: 2px;
+  
+  /* Shadows (minimal - Notan flat aesthetic) */
+  --shadow-subtle: 0 1px 2px rgba(0, 0, 0, 0.05);
+  
+  /* Z-index Scale */
+  --z-base: 1;
+  --z-nav: 100;
+  --z-modal: 1000;
+}
+
+/* Responsive Typography Variables */
+@media (max-width: 768px) {
+  :root {
+    --font-size-76: 3rem;     /* 48px on mobile */
+    --font-size-57: 2.5rem;   /* 40px on mobile */
+    --font-size-32: 1.75rem;  /* 28px on mobile */
+    --space-128: 4rem;        /* 64px on mobile */
+    --space-96: 3rem;         /* 48px on mobile */
+    --container-padding: var(--space-16);
+  }
+}
