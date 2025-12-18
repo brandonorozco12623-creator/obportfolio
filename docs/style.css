@@ -1415,7 +1415,124 @@ footer {
 }
 
 /* ============================================
-   13. ACCESSIBILITY
+   13. CONTACT FORM STYLES (Zapier Integration)
+   ============================================ */
+
+.contact-form-section {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: var(--space-48);
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 3px solid var(--color-white);
+  border-radius: 0;
+}
+
+.contact-form-section h2 {
+  color: var(--color-white);
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-black);
+  text-align: center;
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-24);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.form-group label {
+  color: var(--color-white);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--letter-spacing-wide);
+  text-transform: uppercase;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: var(--space-16);
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 3px solid var(--color-white);
+  border-radius: 0;
+  font-size: var(--font-size-body);
+  color: var(--color-black);
+  transition: all var(--transition-base);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  background-color: var(--color-white);
+  border-color: var(--color-blue);
+  box-shadow: 0 0 0 3px rgba(26, 114, 235, 0.2);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+  font-family: inherit;
+}
+
+.form-group input.input-error {
+  border-color: #ff4444;
+  background-color: rgba(255, 68, 68, 0.1);
+}
+
+.contact-form .btn {
+  width: 100%;
+  margin-top: var(--space-16);
+}
+
+.form-status {
+  padding: var(--space-16);
+  border-radius: 0;
+  text-align: center;
+  font-weight: var(--font-weight-bold);
+  display: none;
+}
+
+.form-status-success {
+  display: block;
+  background-color: rgba(46, 213, 115, 0.2);
+  border: 3px solid #2ed573;
+  color: #2ed573;
+}
+
+.form-status-error {
+  display: block;
+  background-color: rgba(255, 68, 68, 0.2);
+  border: 3px solid #ff4444;
+  color: #ff4444;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .contact-form-section {
+    padding: var(--space-32) var(--space-24);
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: var(--space-12);
+    font-size: 16px; /* Prevents iOS zoom on focus */
+  }
+}
+
+/* ============================================
+   14. ACCESSIBILITY
    ============================================ */
 
 .skip-link {
@@ -1455,13 +1572,14 @@ footer {
 }
 
 /* ============================================
-   14. PRINT STYLES
+   15. PRINT STYLES
    ============================================ */
 
 @media print {
   .nav,
   .skip-link,
-  .nav-toggle {
+  .nav-toggle,
+  .contact-form {
     display: none;
   }
   
