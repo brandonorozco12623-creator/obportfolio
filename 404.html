@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Page not found - Brandon Orozco Portfolio">
+    <title>404 - Page Not Found | Brandon Orozco</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- p5.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
+</head>
+<body>
+    <!-- Animated Background Canvas -->
+    <div id="canvas-container"></div>
+    
+    <!-- Skip to Content Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Navigation -->
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+        <div class="container">
+            <div class="nav-container">
+                <a href="index.html" class="nav-logo" aria-label="Brandon Orozco - Home">
+                    Brandon Orozco
+                </a>
+                
+                <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span class="nav-toggle-line"></span>
+                    <span class="nav-toggle-line"></span>
+                    <span class="nav-toggle-line"></span>
+                </button>
+                
+                <ul class="nav-menu" role="list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About Me</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <main id="main-content">
+        <section class="error-page">
+            <div class="container">
+                <div class="error-content">
+                    <div class="error-number" aria-hidden="true">404</div>
+                    <h1 class="error-title">Page Not Found</h1>
+                    <p class="error-description">
+                        Oops! The page you're looking for doesn't exist. It may have been moved or deleted.
+                    </p>
+                    <div class="error-cta">
+                        <a href="index.html" class="btn btn-primary">Back to Home</a>
+                        <a href="contact.html" class="btn btn-outline">Contact Me</a>
+                    </div>
+                    <div class="error-links">
+                        <p class="error-suggestion">Maybe you were looking for:</p>
+                        <ul class="error-suggestions-list">
+                            <li><a href="index.html" class="error-link">Home</a></li>
+                            <li><a href="about.html" class="error-link">About Me</a></li>
+                            <li><a href="blog.html" class="error-link">Blog</a></li>
+                            <li><a href="contact.html" class="error-link">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="section section-white" style="padding-top: var(--space-48); padding-bottom: var(--space-48);">
+        <div class="container">
+            <div class="flex flex-between">
+                <p class="caption">© 2025 Brandon Orozco. All rights reserved.</p>
+                <div class="flex gap-24">
+                    <a href="index.html" class="caption">Home</a>
+                    <a href="about.html" class="caption">About Me</a>
+                    <a href="blog.html" class="caption">Blog</a>
+                    <a href="contact.html" class="caption">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="js/background.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
