@@ -2,7 +2,7 @@
 // This script handles form submission to Zapier webhook
 
 // CONFIGURATION: Replace this URL with your actual Zapier webhook URL
-const ZAPIER_WEBHOOK_URL = 'YOUR_ZAPIER_WEBHOOK_URL_HERE';
+const ZAPIER_WEBHOOK_URL = 'https://hooks.zapier.com/hooks/catch/25749245/ua9hmdy/';
 
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('zapier-contact-form');
