@@ -1,0 +1,175 @@
+/* Components - Link Cards, Cookie Consent, Buttons, Textures */
+
+/* Platform Link Cards */
+.platform-link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-lg);
+  background: rgb(31, 34, 48);
+  border: 1px solid rgba(143, 157, 183, 0.3);
+  color: var(--comet-light-metal);
+  text-decoration: none;
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  font-weight: 700;
+  text-transform: lowercase;
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+  min-height: 64px;
+  border-radius: var(--radius-sm);
+}
+
+.platform-link:hover {
+  border-color: var(--comet-vibrant-blue);
+  background: rgb(40, 45, 60);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.platform-link:active {
+  transform: translateY(0);
+}
+
+.platform-icon {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--comet-vibrant-blue);
+}
+
+.platform-icon svg,
+.platform-icon i {
+  width: 24px;
+  height: 24px;
+  color: var(--comet-vibrant-blue);
+}
+
+.link-text {
+  flex-grow: 1;
+  font-size: var(--text-lg);
+  font-weight: 700;
+  text-transform: lowercase;
+  position: relative;
+  color: var(--comet-light-metal);
+  mix-blend-mode: lighten;
+}
+
+/* Advanced Glitch Effect - RGB Channel Separation */
+.link-text::before,
+.link-text::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  clip: rect(0, 0, 0, 0);
+}
+
+.link-text::before {
+  left: -1px;
+  text-shadow: 1px 0 rgba(71, 122, 180, 0.7);
+}
+
+.link-text::after {
+  left: 1px;
+  text-shadow: -1px 0 rgba(76, 201, 240, 0.7);
+}
+
+.platform-link:hover .link-text::before {
+  text-shadow: 3px 0 rgba(71, 122, 180, 0.8);
+}
+
+.platform-link:hover .link-text::after {
+  text-shadow: -4px 0 rgba(76, 201, 240, 0.8);
+}
+
+/* Animations removed for performance */
+
+/* RGB Channel Separation Effect */
+.artist-name::before,
+.artist-name::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.artist-name:hover::before {
+  left: 2px;
+  text-shadow: -2px 0 var(--comet-vibrant-blue);
+  color: var(--comet-vibrant-blue);
+  opacity: 0.8;
+}
+
+.artist-name:hover::after {
+  left: -2px;
+  text-shadow: 2px 0 var(--comet-earth-teal);
+  color: var(--comet-earth-teal);
+  opacity: 0.8;
+}
+
+/* Glitch animations removed for performance */
+
+/* Animations removed globally for performance */
+
+.link-arrow {
+  font-size: var(--text-xl);
+  opacity: 0.5;
+  transition: all var(--transition-base);
+  flex-shrink: 0;
+}
+
+.platform-link:hover .link-arrow {
+  opacity: 1;
+  transform: translateX(4px);
+}
+
+/* Texture Overlays */
+.grain-overlay,
+.noise-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 9998;
+  will-change: opacity;
+  contain: strict;
+}
+
+.grain-overlay {
+  background-image: url('data:image/svg+xml,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noiseFilter)"/%3E%3C/svg%3E');
+  opacity: 0.15;
+  mix-blend-mode: multiply;
+}
+
+.noise-layer {
+  background-image: url('data:image/svg+xml,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter2"%3E%3CfeTurbulence type="turbulence" baseFrequency="0.9" numOctaves="4" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noiseFilter2)"/%3E%3C/svg%3E');
+  opacity: 0.05;
+  mix-blend-mode: overlay;
+}
+
+/* Simplify textures on mobile */
+@media (max-width: 767px) {
+  .grain-overlay {
+    opacity: 0.08;
+  }
+  
+  .noise-layer {
+    opacity: 0.03;
+  }
+}
+
+/* All animations removed for performance */

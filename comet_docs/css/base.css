@@ -1,0 +1,130 @@
+/* Base Styles - Typography, Colors, Global Elements */
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  height: 100%;
+}
+
+/* Respect user motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--comet-light-metal);
+  background-color: var(--comet-deep-navy);
+  background-image: url('../images/background.jpg');
+  background-repeat: repeat;
+  background-size: auto;
+  text-transform: lowercase;
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  text-transform: lowercase;
+  line-height: 1.2;
+  margin-bottom: var(--space-md);
+}
+
+h1 {
+  font-size: var(--text-3xl);
+}
+
+h2 {
+  font-size: var(--text-2xl);
+}
+
+h3 {
+  font-size: var(--text-xl);
+}
+
+p {
+  margin-bottom: var(--space-sm);
+}
+
+/* Links */
+a {
+  color: var(--comet-vibrant-blue);
+  transition: color var(--transition-base);
+}
+
+a:hover {
+  color: var(--comet-light-metal);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--comet-vibrant-blue);
+  outline-offset: 2px;
+}
+
+/* Skip Link for Accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--comet-vibrant-blue);
+  color: var(--comet-deep-navy);
+  padding: var(--space-sm) var(--space-md);
+  text-decoration: none;
+  font-weight: 700;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Screen Reader Only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Focus Styles */
+*:focus-visible {
+  outline: 2px solid var(--comet-vibrant-blue);
+  outline-offset: 2px;
+}
+
+/* Selection */
+::selection {
+  background: var(--comet-vibrant-blue);
+  color: var(--comet-deep-navy);
+}
+
+::-moz-selection {
+  background: var(--comet-vibrant-blue);
+  color: var(--comet-deep-navy);
+}
